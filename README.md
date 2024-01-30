@@ -1,1 +1,1 @@
-abc
+store-ocr-info-flask-api
