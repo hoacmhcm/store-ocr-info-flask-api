@@ -153,7 +153,8 @@ def list_data():
 
         # Fetch data from the MySQL database
         cursor = conn.cursor(dictionary=True)
-        cursor.execute('SELECT * FROM data')
+        # Use LIMIT to limit the number of rows returned
+        cursor.execute('SELECT * FROM data LIMIT 100')  # Adjust the limit as needed
         data_list = cursor.fetchall()
         conn.close()
 
