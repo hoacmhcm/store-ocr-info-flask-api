@@ -15,6 +15,7 @@ host = 'db-mysql-sgp1-70366-do-user-15012910-0.c.db.ondigitalocean.com'  # or '1
 user = 'doadmin'
 password = 'AVNS_qM61BwxPV0134mutG-J'
 database = 'defaultdb'
+port = 25060
 
 spaces_access_key = 'DO00CY9QCZK27QARV2LP'
 secrets_access_key = 'al7zummlFpomgSccYkNhpYVIbcq1RPRdleVEX3pup9c'
@@ -29,7 +30,8 @@ def init_db():
         host=host,
         user=user,
         password=password,
-        database=database
+        database=database,
+        port=port
     )
     cursor = conn.cursor()
     cursor.execute(
@@ -119,7 +121,8 @@ def upload_data():
             host=host,
             user=user,
             password=password,
-            database=database
+            database=database,
+            port=port
         )
 
         # Store data in the MySQL database
@@ -164,4 +167,4 @@ def list_data():
 
 
 if __name__ == '__main__':
-    app.run(port=5000, debug=True)
+    app.run(port=5000)
