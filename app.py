@@ -11,10 +11,10 @@ app = Flask(__name__)
 cors = CORS(app, supports_credentials=True)
 
 # Replace these with your actual MySQL connection details
-host = 'localhost'  # or '127.0.0.1' for localhost
-user = 'root'
-password = ''
-database = 'ocr'
+host = 'db-mysql-sgp1-70366-do-user-15012910-0.c.db.ondigitalocean.com'  # or '127.0.0.1' for localhost
+user = 'doadmin'
+password = 'AVNS_qM61BwxPV0134mutG-J'
+database = 'defaultdb'
 
 spaces_access_key = 'DO00CY9QCZK27QARV2LP'
 secrets_access_key = 'al7zummlFpomgSccYkNhpYVIbcq1RPRdleVEX3pup9c'
