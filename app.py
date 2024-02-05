@@ -148,7 +148,8 @@ def list_data():
             host=host,
             user=user,
             password=password,
-            database=database
+            database=database,
+            port=port
         )
 
         # Fetch data from the MySQL database
