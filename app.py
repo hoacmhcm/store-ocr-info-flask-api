@@ -154,12 +154,12 @@ def list_data():
         # Fetch data from the MySQL database
         cursor = conn.cursor(dictionary=True)
         # Use LIMIT to limit the number of rows returned
-        cursor.execute('SELECT * FROM data LIMIT 100')  # Adjust the limit as needed
-        data_list = cursor.fetchall()
+        # cursor.execute('SELECT * FROM data LIMIT 100')  # Adjust the limit as needed
+        # data_list = cursor.fetchall()
         conn.close()
 
         # Convert the result to JSON
-        result = {'code': 0, 'data': data_list}
+        result = {'code': 0, 'data': {}}
 
         return jsonify(result), 200
 
